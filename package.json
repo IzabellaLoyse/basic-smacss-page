@@ -1,0 +1,16 @@
+{
+  "name": "basic-smacss-page",
+  "version": "1.0.0",
+  "description": "Page created with the SMACSS Architecture",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "sass --watch src/sass:dist/css --style compressed"
+  },
+  "keywords": [],
+  "author": "Izabella Loyse Cândido",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.50.0"
+  }
+}
