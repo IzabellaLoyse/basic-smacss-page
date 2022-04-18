@@ -5,12 +5,18 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "sass --watch src/sass:dist/css --style compressed"
+    "dev": "sass --watch src/sass:dist/css --style compressed ",
+    "lint": "stylelint 'src/**/*.scss'"
   },
   "keywords": [],
   "author": "Izabella Loyse Cândido",
   "license": "ISC",
   "dependencies": {
     "sass": "^1.50.0"
+  },
+  "devDependencies": {
+    "postcss": "^8.4.12",
+    "stylelint": "^14.7.1",
+    "stylelint-config-sass-guidelines": "^9.0.1"
   }
 }
