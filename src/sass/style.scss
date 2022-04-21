@@ -2,11 +2,11 @@
 
 /* ---- Base ----*/
 
-@use "base/normalize";
-@use "base/reset";
+@use 'base/normalize';
+@use 'base/reset';
 
 /* ---- Components----*/
-@use "components/button";
+@use 'components/button';
 
 /* ---- Layout ----*/
-@use "layout/header";
+@use 'layout/header';
