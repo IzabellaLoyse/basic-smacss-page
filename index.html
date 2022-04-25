@@ -4,15 +4,22 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
     <link rel="stylesheet" href="dist/css/style.css" />
     <title>Mascavo Shop</title>
   </head>
 
   <body>
-    <header class="l-header">
-      <h1>Mascavo Shop</h1>
+    <header class="l-header l-main-container">
+      <h1 class="c-header__title">Mascavo Shop</h1>
 
-      <nav>
+      <nav class="">
         <ul>
           <li><span>👩🏻</span> Mulher</li>
           <li><span>👨🏽</span> Homem</li>
@@ -39,14 +46,14 @@
               src="./src/assets/icons/icon-cart.svg"
               alt="Ícone de carrinho de compras"
             />
-            <span>1</span>
+            <span class="js-amount-product">0</span>
           </li>
         </ul>
       </div>
     </header>
 
     <main>
-      <section>
+      <section class="l-main-container">
         <section>
           <div>
             <a href="/">Novo Produto</a>
@@ -67,13 +74,40 @@
                 <input type="radio" name="blue" id="colors" />
               </div>
 
-              <div>
+              <div class="c-box-size">
                 <h3>Escolha o seu tamanho</h3>
-                <button type="button">PP</button>
-                <button type="button">P</button>
-                <button type="button">M</button>
-                <button type="button">G</button>
-                <button type="button">GG</button>
+
+                <div class="c-box-buttons">
+                  <button
+                    type="button"
+                    value="PP"
+                    disabled
+                    class="c-box-buttons__button c-button--disabled"
+                  >
+                    PP
+                  </button>
+                  <button type="button" value="P" class="c-box-buttons__button">
+                    P
+                  </button>
+                  <button
+                    type="button"
+                    value="M"
+                    class="c-box-buttons__button js-button"
+                    onclick="handleEmitMessage()"
+                  >
+                    M
+                  </button>
+                  <button type="button" class="c-box-buttons__button">G</button>
+                  <button
+                    type="button"
+                    value="GG"
+                    disabled
+                    class="c-box-buttons__button c-button--disabled"
+                  >
+                    GG
+                  </button>
+                  <div class="js-message-alert"></div>
+                </div>
               </div>
             </section>
 
@@ -84,13 +118,17 @@
 
             <div>
               <button>Outros Itens</button>
-              <button>Comprar</button>
+              <button onclick="handleAmountProduct()">Comprar</button>
             </div>
           </div>
         </section>
       </section>
     </main>
 
-    <footer>Desenvolvido por Izabella Loyse 💙</footer>
+    <footer class="l-footer">
+      <p class="c-footer__description">Desenvolvido por Izabella Loyse 💙</p>
+    </footer>
+
+    <script src="./src/js/index.js"></script>
   </body>
 </html>

@@ -1,0 +1,32 @@
+/* =====================================================
+  * * Colors
+   ===================================================== */
+
+$colors: (
+  'background-color': #fafafa,
+  'primary-color': #0b0a0a,
+  'secondary-color': #bfbfc1,
+  'tertiary-color': #eceeef,
+  'basic-color': #fff,
+  'first-product-color': #00a699,
+  'second-product-color': #f15908,
+);
+
+/* =====================================================
+  * * Typography
+   ===================================================== */
+
+$global-font-family: 'Poppins', sans-serif;
+
+$font-weight: (
+  'regular': 400,
+  'medium': 500,
+  'semi-bold': 600,
+  'bold': 700,
+);
+
+/* =====================================================
+  * * Transition
+   ===================================================== */
+
+$transition-duration-exit: 205ms;

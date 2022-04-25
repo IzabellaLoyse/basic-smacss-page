@@ -1,4 +1,16 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
 body {
+  background-color: map-get($colors, 'background-color');
+  font-family: $global-font-family;
   line-height: 1.5;
 }
 
@@ -10,4 +22,8 @@ h3,
 h4 {
   hyphens: auto;
   overflow-wrap: break-word;
+}
+
+li {
+  list-style: none;
 }
