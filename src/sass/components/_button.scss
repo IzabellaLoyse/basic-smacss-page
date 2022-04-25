@@ -9,7 +9,7 @@
   transition: all $transition-duration-exit;
   width: 2.5rem;
 
-  &:hover {
+  &:focus {
     background-color: map-get($colors, 'primary-color');
     border: 6px double map-get($colors, 'basic-color');
     color: map-get($colors, 'tertiary-color');
