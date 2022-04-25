@@ -7,17 +7,20 @@ const handleAmountProduct = () => {
 };
 
 const handleEmitMessage = () => {
+  const button = document.querySelectorAll('input[type="button"]');
   const messageAlert = document.querySelector('.js-message-alert');
 
-  messageAlert.insertAdjacentHTML(
-    'beforeend',
-    `
-    <span class="message">Restam 4 itens!</span>
-
-  `,
-  );
-
-  if (messageAlert.children.length > 1) {
-    messageAlert.children[0].remove();
-  }
+  button.forEach((item) => {
+    item.addEventListener('click', () => {
+      if (item.value === 'M') {
+        messageAlert.innerHTML = `
+        <span class="is-message-alert--active">Restam 4 itens!</span>
+        `;
+      } else {
+        messageAlert.innerHTML = '';
+      }
+    });
+  });
 };
+
+handleEmitMessage();
