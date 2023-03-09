@@ -1,7 +1,17 @@
+@use '../abstract/variables';
+@use 'sass:map';
+
 .c-footer__description {
-  color: map-get($colors, 'primary-color');
+  color: map.get(variables.$colors, 'primary-color');
   font-size: 1rem;
-  font-weight: map-get($font-weight, 'regular');
+  font-weight: map.get(variables.$font-weight, 'regular');
   letter-spacing: 1px;
   text-align: center;
+}
+
+.c-shop-description__text {
+  color: map.get(variables.$colors, 'secondary-color');
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  max-width: 760px;
 }

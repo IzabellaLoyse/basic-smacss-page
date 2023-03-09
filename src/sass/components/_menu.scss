@@ -1,0 +1,28 @@
+@use '../abstract/variables';
+@use '../abstract/mixins';
+@use 'sass:map';
+
+.c-header__menu {
+  @include mixins.flex(center, space-between, row, 2rem);
+}
+
+.c-header__item {
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: map.get(variables.$font-weight, 'bold');
+}
+
+.c-header__icon {
+  cursor: pointer;
+
+  img {
+    height: 1.5rem;
+    width: 1.5rem;
+  }
+
+  &-amount {
+    color: map.get(variables.$colors, 'first-product-color');
+    font-size: 1rem;
+    font-weight: map.get(variables.$font-weight, 'bold');
+  }
+}

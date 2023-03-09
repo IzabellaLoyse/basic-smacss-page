@@ -1,0 +1,9 @@
+@use '../abstract/variables';
+@use 'sass:map';
+
+.is-message-alert--active {
+  color: map.get(variables.$colors, 'error-color');
+  font-size: 0.875rem;
+  font-weight: map.get(variables.$font-weight, 'medium');
+  letter-spacing: 1.05px;
+}

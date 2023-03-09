@@ -1,0 +1,31 @@
+@use '../abstract/mixins';
+
+.c-shop-container {
+  background-image: linear-gradient(
+    90deg,
+    rgb(248, 250, 250) 69%,
+    rgb(244, 246, 246) 90%,
+    rgb(227, 229, 230) 100%
+  );
+
+  height: auto;
+  margin-bottom: 3rem;
+  margin-top: 3rem;
+  padding: 1rem;
+  width: 100%;
+}
+
+.c-shop-wrapper {
+  @include mixins.flex(center, space-between, row, 25rem);
+  width: 100%;
+}
+
+.c-shop-product {
+  height: auto;
+  width: 50%;
+
+  &__image {
+    height: 35rem;
+    width: 25rem;
+  }
+}

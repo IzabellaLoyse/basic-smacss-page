@@ -1,24 +1,96 @@
-.c-box-buttons__button {
-  background-color: map-get($colors, 'tertiary-color');
-  border: 1px inset map-get($colors, 'primary-color');
+@use '../abstract/variables';
+@use '../abstract/mixins';
+@use 'sass:map';
+
+.c-button {
+  border: 1px solid transparent;
+  width: 6rem;
+}
+
+.c-button__big {
+  height: 3rem;
+  width: 12rem;
+}
+
+.c-button__big--buy {
+  @include mixins.layout-big-button(
+    transparent,
+    map.get(variables.$colors, 'primary-color'),
+    map.get(variables.$colors, 'primary-color'),
+    map.get(variables.$colors, 'primary-color'),
+    map.get(variables.$colors, 'basic-color')
+  );
+}
+
+.c-button__big--other {
+  @include mixins.layout-big-button(
+    map.get(variables.$colors, 'primary-color'),
+    map.get(variables.$colors, 'primary-color'),
+    map.get(variables.$colors, 'basic-color'),
+    transparent,
+    map.get(variables.$colors, 'primary-color')
+  );
+}
+
+.c-button__size {
+  background-color: map.get(variables.$colors, 'tertiary-color');
+  border: 1px inset map.get(variables.$colors, 'primary-color');
   border-radius: 50%;
-  color: map-get($colors, 'primary-color');
+  color: map.get(variables.$colors, 'primary-color');
   cursor: pointer;
-  font-weight: map-get($font-weight, 'bold');
-  height: 2.5rem;
-  transition: all $transition-duration-exit;
-  width: 2.5rem;
+  font-weight: map.get(variables.$font-weight, 'bold');
+  height: 2.2rem;
+  text-align: center;
+  transition: variables.$transition-duration-exit ease-in-out;
+  width: 2.2rem;
 
   &:focus {
-    background-color: map-get($colors, 'primary-color');
-    border: 6px double map-get($colors, 'basic-color');
-    color: map-get($colors, 'tertiary-color');
-    height: 3rem;
-    width: 3rem;
+    background-color: map.get(variables.$colors, 'primary-color');
+    color: map.get(variables.$colors, 'tertiary-color');
   }
 }
 
 .c-button--disabled {
   cursor: not-allowed;
   opacity: 0.5;
+}
+
+.c-button__link {
+  border-radius: variables.$global-border-radius;
+  font-size: 0.8rem;
+  font-weight: map.get(variables.$font-weight, 'semi-bold');
+  height: 3rem;
+  padding: 0.4rem;
+  text-transform: uppercase;
+  width: 6rem;
+
+  &:first-child {
+    margin-right: 1rem;
+  }
+}
+
+.c-button__link--primary {
+  background-color: map.get(variables.$colors, 'second-product-background');
+  color: map.get(variables.$colors, 'second-product-color');
+
+  &:active {
+    color: rgb(192, 74, 5);
+  }
+}
+
+.c-button__link--secondary {
+  background-color: map.get(variables.$colors, 'first-product-background');
+  color: map.get(variables.$colors, 'first-product-color');
+
+  &:active {
+    color: rgb(6, 126, 126);
+  }
+}
+
+.c-button__radio {
+  &--green {
+  }
+
+  &--orange {
+  }
 }

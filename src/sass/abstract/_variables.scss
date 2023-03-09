@@ -5,11 +5,14 @@
 $colors: (
   'background-color': #fafafa,
   'primary-color': #0b0a0a,
-  'secondary-color': #bfbfc1,
+  'secondary-color': #3e3e42,
   'tertiary-color': #eceeef,
   'basic-color': #fff,
-  'first-product-color': #00a699,
-  'second-product-color': #f15908,
+  'first-product-color': #086059,
+  'first-product-background': #a6fff8,
+  'second-product-color': #a2400c,
+  'second-product-background': #fddac8,
+  'error-color': #e30909,
 );
 
 /* =====================================================
@@ -24,6 +27,12 @@ $font-weight: (
   'semi-bold': 600,
   'bold': 700,
 );
+
+/* =====================================================
+  * * Measures
+   ===================================================== */
+
+$global-border-radius: 3px;
 
 /* =====================================================
   * * Transition

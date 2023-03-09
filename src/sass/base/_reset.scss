@@ -1,3 +1,6 @@
+@use '../abstract/variables';
+@use 'sass:map';
+
 html {
   box-sizing: border-box;
 }
@@ -9,8 +12,8 @@ html {
 }
 
 body {
-  background-color: map-get($colors, 'background-color');
-  font-family: $global-font-family;
+  background-color: map.get(variables.$colors, 'background-color');
+  font-family: variables.$global-font-family;
   line-height: 1.5;
 }
 
@@ -26,4 +29,19 @@ h4 {
 
 li {
   list-style: none;
+}
+
+a {
+  text-decoration-style: dashed;
+  text-underline-offset: variables.$global-border-radius;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+}
+
+img {
+  height: auto;
+  max-width: 100%;
 }

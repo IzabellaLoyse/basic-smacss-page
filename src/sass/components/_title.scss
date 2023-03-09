@@ -1,6 +1,15 @@
+@use '../abstract/variables';
+@use 'sass:map';
+
 .c-header__title {
-  color: map-get($colors, 'primary-color');
+  color: map.get(variables.$colors, 'primary-color');
   font-size: 1.8rem;
-  font-weight: map-get($font-weight, 'semi-bold');
+  font-weight: map.get(variables.$font-weight, 'semi-bold');
   letter-spacing: 1px;
+}
+
+.c-shop-description__title {
+  color: map.get(variables.$colors, 'primary-color');
+  font-size: 2rem;
+  font-weight: map.get(variables.$font-weight, 'bold');
 }

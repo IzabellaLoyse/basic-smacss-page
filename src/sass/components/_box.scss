@@ -1,0 +1,39 @@
+@use '../abstract/variables';
+@use '../abstract/mixins';
+@use 'sass:map';
+
+.c-box-wrapper {
+  @include mixins.flex(center, space-between);
+  width: 100%;
+}
+
+.c-box-buttons-size {
+  @include mixins.flex(center, center, row, 1rem);
+}
+
+.c-box-buttons {
+  @include mixins.flex(center, space-between, row, 2rem);
+  width: 100%;
+}
+
+.c-box-colors {
+  align-self: flex-start;
+}
+
+.c-box-price {
+  @include mixins.flex(center, flex-start, row, 1rem);
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+
+  p {
+    color: map.get(variables.$colors, 'secondary-color');
+    font-size: 1.4rem;
+    font-weight: map.get(variables.$font-weight, 'bold');
+    letter-spacing: 1px;
+
+    strong {
+      color: map.get(variables.$colors, 'primary-color');
+      font-size: 1.4rem;
+    }
+  }
+}

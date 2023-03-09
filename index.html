@@ -19,112 +19,116 @@
     <header class="l-header l-main-container">
       <h1 class="c-header__title">Mascavo Shop</h1>
 
-      <nav class="">
-        <ul>
-          <li><span>👩🏻</span> Mulher</li>
-          <li><span>👨🏽</span> Homem</li>
-          <li><span>👶🏼</span> Kids</li>
+      <nav>
+        <ul class="c-header__menu">
+          <li class="c-header__item"><span>👩🏻</span> Mulher</li>
+          <li class="c-header__item"><span>👨🏽</span> Homem</li>
+          <li class="c-header__item"><span>👶🏼</span> Kids</li>
         </ul>
       </nav>
 
-      <div>
-        <ul>
-          <li>
+      <nav>
+        <ul class="c-header__menu">
+          <li class="c-header__icon">
             <img
+              tabindex="0"
               src="./src/assets/icons/icon-heart.svg"
               alt="Ícone de coração"
             />
           </li>
-          <li>
+
+          <li class="c-header__icon">
             <img
+              tabindex="0"
               src="./src/assets/icons/icon-search.svg"
               alt="Ícone de Lupa de pesquisa"
             />
           </li>
-          <li>
+          <li class="c-header__icon">
             <img
+              tabindex="0"
               src="./src/assets/icons/icon-cart.svg"
               alt="Ícone de carrinho de compras"
             />
-            <span class="js-amount-product">0</span>
+            <span class="js-amount-product c-header__icon-amount">0</span>
           </li>
         </ul>
-      </div>
+      </nav>
     </header>
 
     <main>
-      <section class="l-main-container">
+      <section class="l-main-container c-shop-container c-shop-wrapper">
         <section>
           <div>
-            <a href="/">Novo Produto</a>
-            <a href="/">Oferta</a>
+            <a class="c-button__link c-button__link--primary" href="/"
+              >Novo Produto</a
+            >
+            <a class="c-button__link c-button__link--secondary" href="/"
+              >Oferta</a
+            >
           </div>
 
-          <div>
-            <h2>Verão na California</h2>
-            <p>
+          <div class="c-shop-description">
+            <h2 class="c-shop-description__title">Verão na California</h2>
+            <p class="c-shop-description__text">
               Uma camiseta leve e solta com uma amarração despojada faz um dia
-              ser maravilhoso.Há uma sensação agradável de liberdade e frescor.
+              ser maravilhoso. Há uma sensação agradável de liberdade e frescor.
             </p>
+          </div>
 
-            <section>
+          <section class="c-box-wrapper">
+            <div class="c-box-colors">
+              <h3>Cores</h3>
+
               <div>
-                <label for="colors">Cores:</label>
-                <input type="radio" name="white" id="colors" />
-                <input type="radio" name="blue" id="colors" />
+                <input
+                  type="radio"
+                  name="green"
+                  id="green"
+                  class="c-button__radio c-button__radio--green"
+                />
+                <label for="green" class="sr-only">Verde</label>
+                <input
+                  type="radio"
+                  name="orange"
+                  id="orange"
+                  class="c-button__radio c-button__radio--orange"
+                />
+                <label for="orange" class="sr-only">Laranja</label>
               </div>
-
-              <div class="c-box-size">
-                <h3>Escolha o seu tamanho</h3>
-
-                <div class="c-box-buttons">
-                  <input
-                    type="button"
-                    value="PP"
-                    disabled
-                    class="c-box-buttons__button c-button--disabled"
-                  />
-
-                  <input
-                    type="button"
-                    value="P"
-                    class="c-box-buttons__button"
-                  />
-
-                  <input
-                    type="button"
-                    value="M"
-                    class="c-box-buttons__button js-button"
-                  />
-
-                  <input
-                    type="button"
-                    value="G"
-                    class="c-box-buttons__button"
-                  />
-
-                  <input
-                    type="button"
-                    value="GG"
-                    disabled
-                    class="c-box-buttons__button c-button--disabled"
-                  />
-                </div>
-                <div class="js-message-alert"></div>
-              </div>
-            </section>
-
-            <div>
-              <h3>Preço</h3>
-              <p><strong>R$</strong> 65,00</p>
             </div>
 
-            <div>
-              <button>Outros Itens</button>
-              <button onclick="handleAmountProduct()">Comprar</button>
+            <div class="c-box-size">
+              <h3>Escolha o seu tamanho</h3>
+
+              <div class="c-box-buttons-size"></div>
+              <div class="c-message-alert js-message-alert"></div>
             </div>
+          </section>
+
+          <div class="c-box-price">
+            <p><strong>R$</strong> 65,00</p>
+          </div>
+
+          <div class="c-box-buttons">
+            <button
+              class="c-button c-button__big c-button__big--buy js-button-buy"
+            >
+              Comprar
+            </button>
+            <button class="c-button c-button__big c-button__big--other">
+              Outros Itens
+            </button>
           </div>
         </section>
+
+        <div class="c-shop-product">
+          <img
+            src="/src/assets/images/clothing.png"
+            alt="Imagem de uma jovem usando uma camiseta leve e solta"
+            class="c-shop-product__image"
+          />
+        </div>
       </section>
     </main>
 
